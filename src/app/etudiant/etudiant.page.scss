@@ -1,0 +1,139 @@
+$primary-color: #180c0c;
+$secondary-color: #3d3934;
+$text-color: #4756b9e5;
+$background-color: #190707;
+
+/* Styles globaux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  .sidebar {
+    width: 250px;
+    background-color: $primary-color;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    transition: transform 0.3s ease-in-out;
+
+    &.hidden {
+      transform: translateX(-100%);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    .menu {
+      width: 100%;
+
+      ion-item {
+        color: #fff;
+        margin: 8px 0;
+        --background: transparent;
+
+        &:hover {
+          --background: rgba(255, 255, 255, 0.419);
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    background-color: $background-color;
+    padding: 16px;
+    overflow-y: auto;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+
+      h1 {
+        color: $text-color;
+        font-size: 24px;
+      }
+
+      ion-button {
+        --background: $primary-color;
+        color: #fff;
+      }
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+
+      .stat {
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        h3 {
+          color: $primary-color;
+          font-size: 18px;
+          margin-bottom: 8px;
+        }
+
+        p {
+          color: #666;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 10;
+      transform: translateX(-100%);
+    }
+
+    .sidebar.hidden {
+      transform: translateX(-100%);
+    }
+
+    .main-content {
+      margin-left: 0;
+    }
+
+    .toggle-sidebar {
+      display: block;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 15;
+
+      ion-button {
+        --background: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+}

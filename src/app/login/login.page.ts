@@ -40,7 +40,7 @@ export class LoginPage implements OnInit {
       });
 
       if (loginSuccessful) {
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/accueil']);
       } else {
         this.presentToast('Invalid email or password. Please try again.');
       }

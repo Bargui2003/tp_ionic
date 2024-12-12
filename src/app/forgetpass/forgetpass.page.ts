@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forgetpass.page.scss'],
 })
 export class ForgetpassPage implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

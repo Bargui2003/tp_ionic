@@ -1,0 +1,60 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Accueil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-menu content-id="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item ><ion-button [routerLink]="['/accueil']"> Accueil</ion-button> </ion-item>
+        <ion-item ><ion-button [routerLink]="['/propos']">A propos</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/etudiant']">Les étudiant</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/matiere']">Les Matières</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/contact']">Contact</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/formation']">Fromation</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/login']">Déconnexion</ion-button></ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <ion-content>
+    <div class="dashboard">
+      <div class="main-content">
+        <div class="header">
+          <h1>------</h1>
+          <ion-button>----</ion-button>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <h3>-------</h3>
+            <p>--------</p>
+          </div>
+          <div class="stat">
+            <h3>-------</h3>
+            <p>---------</p>
+          </div>
+          <div class="stat">
+            <h3>----------</h3>
+            <p>-----------</p>
+          </div>
+          <div class="stat">
+            <h3>----------</h3>
+            <p>-----------</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-app>

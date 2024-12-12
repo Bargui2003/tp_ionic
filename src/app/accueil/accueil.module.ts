@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DashboardPageRoutingModule } from './dashboard-routing.module';
+import { DashboardPageRoutingModule } from './accueil-routing.module';
 
-import { DashboardPage } from './dashboard.page';
+import { AcceuilPage } from './accueil.page';
 
 @NgModule({
   imports: [
@@ -13,6 +13,6 @@ import { DashboardPage } from './dashboard.page';
     IonicModule,
     DashboardPageRoutingModule
   ],
-  declarations: [DashboardPage]
+  declarations: [AcceuilPage]
 })
 export class DashboardPageModule {}

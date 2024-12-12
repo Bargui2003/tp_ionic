@@ -7,9 +7,27 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule) },
   { path: 'signup', loadChildren: () => import('./signup/signup.module').then(m => m.SignupPageModule) },
   { path: 'forgetpass', loadChildren: () => import('./forgetpass/forgetpass.module').then(m => m.ForgetpassPageModule) },
-  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule) },
-  { path: 'users',loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule) },
-  {path: 'edit-user', loadChildren: () => import('./edit-user/edit-user.module').then( m => m.EditUserPageModule)},
+  { path: 'accueil', loadChildren: () => import('./accueil/accueil.module').then( m => m.DashboardPageModule) },  {
+    path: 'etudiant',
+    loadChildren: () => import('./etudiant/etudiant.module').then( m => m.EtudiantPageModule)
+  },
+  {
+    path: 'matiere',
+    loadChildren: () => import('./matiere/matiere.module').then( m => m.MatierePageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'formation',
+    loadChildren: () => import('./formation/formation.module').then( m => m.FormationPageModule)
+  },
+  {
+    path: 'propos',
+    loadChildren: () => import('./propos/propos.module').then( m => m.ProposPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

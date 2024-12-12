@@ -15,13 +15,15 @@ h4{
 a{
 margin-left: 55%;
 }
-ion-item{
-margin-left: 12px;
-margin-right: 12px;
-border-radius: 5px;
-border-color: rgb(249, 244, 244);
-border-width: 1px;
-border-style:solid;
+ion-item {
+        position: relative;
+        margin-left: 12px;
+        margin-right: 12px;
+        border-radius: 5px;
+        border-color: rgb(249, 244, 244);
+        border-width: 1px;
+        border-style: solid;
+        padding: 12px;
 }
 ion-input{
     display: contents;
