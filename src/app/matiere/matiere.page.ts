@@ -5,11 +5,36 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './matiere.page.html',
   styleUrls: ['./matiere.page.scss'],
 })
-export class MatierePage implements OnInit {
 
-  constructor() { }
+export class MatierePage {
+  matieres = [
+    {
+      nom: 'virtualisation et cloud',
+      module: 'base de données',
+      coefficient: '1.5',
+    },
+    {
+      nom: 'développement mobile',
+      module: 'développement',
+      coefficient: '1.5',
+    },
+    {
+      nom: 'architechture SOA',
+      module: 'service web',
+      coefficient: '2',
+    },
+    {
+      nom: 'technique de sécurité',
+      module: 'sécurité',
+      coefficient: '1.5',
+    },
+    {
+      nom: 'Entrepreneuriat',
+      module: 'option',
+      coefficient: '1',
+    },
+  ];
 
-  ngOnInit() {
-  }
-
+  constructor() {}
 }
+

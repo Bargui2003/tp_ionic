@@ -1,15 +1,55 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">contact</ion-title>
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Contact</ion-title>
     </ion-toolbar>
   </ion-header>
-  <p>tu peux nous trouver a route djerba 3klm</p>
-  <h4>appeler nous a : 123456789</h4>
-</ion-content>
+
+  <ion-menu content-id="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item ><ion-button [routerLink]="['/accueil']"> Accueil</ion-button> </ion-item>
+        <ion-item ><ion-button [routerLink]="['/propos']">A propos</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/etudiant']">Les étudiant</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/matiere']">Les Matières</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/contact']">Contact</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/formation']">Fromation</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/login']">Déconnexion</ion-button></ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+  <div class="contact-page">
+    <div class="header">
+      <h1>Contactez-nous</h1>
+      <p>Nous sommes là pour vous aider. Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
+    </div>
+    <form (submit)="onSubmit($event)">
+      <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input type="text" required [(ngModel)]="contactData.name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" required [(ngModel)]="contactData.email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Message</ion-label>
+        <ion-textarea required [(ngModel)]="contactData.message" name="message"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Message</ion-label>
+        <ion-textarea required [(ngModel)]="contactData.message" name="message"></ion-textarea>
+      </ion-item>
+      <ion-button expand="block" type="submit" color="primary">Envoyer</ion-button>
+    </form>
+  </div>

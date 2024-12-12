@@ -1,17 +1,82 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>propos</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title> A Propos</ion-title>
+    </ion-toolbar>
+  </ion-header>
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">propos</ion-title>
     </ion-toolbar>
   </ion-header>
-  <p>Crée en 2006, en vertu du décret numéro 1587-2006 du 06 Juin 2006, l’institut supérieur d’informatique de Médenine a pour mission de former des étudiants capables de concevoir et de réaliser des projets en informatique conformément aux besoins des utilisateurs et des entreprises. Il comporte deux départements :
+
+</ion-content>
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Accueil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-menu content-id="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item ><ion-button [routerLink]="['/accueil']"> Accueil</ion-button> </ion-item>
+        <ion-item ><ion-button [routerLink]="['/propos']">A propos</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/etudiant']">Les étudiant</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/matiere']">Les Matières</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/contact']">Contact</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/formation']">Fromation</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/login']">Déconnexion</ion-button></ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <ion-content>
+    <div class="dashboard">
+      <div class="main-content">
+        <div class="header">
+          <h1>------</h1>
+          <ion-button>----</ion-button>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <h3>-------</h3>
+            <p>--------</p>
+          </div>
+          <div class="stat">
+            <h3>-------</h3>
+            <p>---------</p>
+          </div>
+          <div class="stat">
+            <h3>----------</h3>
+            <p>-----------</p>
+          </div>
+          <div class="stat">
+            <h3>----------</h3>
+            <p>-----------</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Crée en 2006, en vertu du décret numéro 1587-2006 du 06 Juin 2006, l’institut supérieur d’informatique de Médenine a pour mission de former des étudiants capables de concevoir et de réaliser des projets en informatique conformément aux besoins des utilisateurs et des entreprises. Il comporte deux départements :
     Le département de l’informatique industrielle
     Le département de l’informatique et multimédia
     Doté des équipements de pointe pour la professionnalisation ; les laboratoires au sein de l’institut permet aux étudiants d’acquérir des connaissances plus pratiques et de se spécialiser dans des domaines bien précis.</p>
-</ion-content>
+  </ion-content>
+</ion-app>
+

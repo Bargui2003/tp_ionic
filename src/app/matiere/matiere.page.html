@@ -1,51 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Liste des Matières</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-menu content-id="main-content">
+<ion-app>
   <ion-header>
     <ion-toolbar color="primary">
-      <ion-title>Menu</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Matière</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item ><ion-button [routerLink]="['/accueil']"> Accueil</ion-button> </ion-item>
-      <ion-item ><ion-button [routerLink]="['/etudiant']">Les étudiant</ion-button></ion-item>
-      <ion-item ><ion-button>Les Matières</ion-button></ion-item>
-      <ion-item ><ion-button [routerLink]="['/login']">Déconnexion</ion-button></ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-<ion-router-outlet id="main-content"></ion-router-outlet>
 
-<ion-content [fullscreen]="true">
-  <<div class="dashboard">
-    <div class="main-content">
-      <div class="header">
-        <h1>------</h1>
-        <ion-button>----</ion-button>
-      </div>
-      <div class="stats">
-        <div class="stat">
-          <h3>-------</h3>
-          <p>--------</p>
-        </div>
-        <div class="stat">
-          <h3>-------</h3>
-          <p>---------</p>
-        </div>
-        <div class="stat">
-          <h3>----------</h3>
-          <p>-----------</p>
-        </div>
-        <div class="stat">
-          <h3>----------</h3>
-          <p>-----------</p>
-        </div>
-      </div>
+  <ion-menu content-id="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item ><ion-button [routerLink]="['/accueil']"> Accueil</ion-button> </ion-item>
+        <ion-item ><ion-button [routerLink]="['/propos']">A propos</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/etudiant']">Les étudiant</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/matiere']">Les Matières</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/contact']">Contact</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/formation']">Fromation</ion-button></ion-item>
+        <ion-item ><ion-button [routerLink]="['/login']">Déconnexion</ion-button></ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <ion-content>
+    <div class="etudiant-page">
+      <h1>Liste des Matières</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" class="header-cell">Nom</ion-col>
+          <ion-col size="4" class="header-cell">Moddule</ion-col>
+          <ion-col size="4" class="header-cell">Coefficient</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let matiere of matieres">
+          <ion-col size="4">{{ matiere.nom }}</ion-col>
+          <ion-col size="4">{{ matiere.module }}</ion-col>
+          <ion-col size="4">{{ matiere.coefficient }}</ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
-  </div>
-</ion-content>
+  </ion-content>
+</ion-app>
