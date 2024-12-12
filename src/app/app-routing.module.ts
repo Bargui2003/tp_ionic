@@ -9,17 +9,8 @@ const routes: Routes = [
   { path: 'forgetpass', loadChildren: () => import('./forgetpass/forgetpass.module').then(m => m.ForgetpassPageModule) },
   { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule) },
   { path: 'users',loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule) },
-  {
-    path: 'map',
-    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
-  },
-  {
-    path: 'edit-user',
-    loadChildren: () => import('./edit-user/edit-user.module').then( m => m.EditUserPageModule)
-  },
+  {path: 'edit-user', loadChildren: () => import('./edit-user/edit-user.module').then( m => m.EditUserPageModule)},
 ];
-
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

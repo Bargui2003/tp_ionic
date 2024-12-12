@@ -1,13 +1,14 @@
-h4{
+h2{
 text-align: center; 
 font-size: xx-large;
 font-style: inherit;
+font-weight: bold;
 }
 $white-color: #fff;
  $height100: 100%;
 
-ion-grid { width:100%;
-    height: $height100;
+ ion-grid { width:100%;  height: $height100;
+   
 }
 
 ion-row {

@@ -1,44 +1,99 @@
-.title {
-  margin-top:  70px;
-  margin-bottom: 80px;
+/* Variables globales pour cohérence des couleurs et styles */
+$primary-color: #3880ff; /* Couleur principale d'Ionic */
+$secondary-color: #3dc2ff; /* Couleur secondaire */
+$text-color: #222; /* Couleur du texte principal */
+
+/* Styles globaux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: $text-color;
+  margin: 0;
 }
-.title p {
-  margin-top: 0 !important;
-  text-transform: lowercase;
+
+/* Header */
+ion-header {
+  ion-toolbar {
+    background-color: $primary-color;
+    color: $primary-color;
+    ion-title {
+      font-weight: bold;
+      font-size: xx-large;
+    }
+  }
 }
-.title h2{
-  text-transform: uppercase;
-}
-.divider {
+
+/* Contenu principal */
+.auth-form {
   display: flex;
-  &:before,
-  &:after{
-    content:  "";
-    flex: 1;
-  }
-}
-.line {
+  flex-direction: column;
   align-items: center;
-  margin: 1em -1em;
-  color: #ccc;
-  &:before,
-  &:after {
-    height: 1px;
-    margin: 0 1em;
-  }
-}
-.one-line {
-  &:before,
-  &:after {
-    background: #ccc;
-  }
-}
-.auth-form ion-grid,
-.auth-form ion row{
-  height: 50px;
   justify-content: center;
-}
-ion-img {
-  height: 20%;
-  margin-top: 20%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  .title {
+    margin-bottom: 24px;
+
+    h2 {
+      color: rgb(211, 223, 252);
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 18px;
+      color: #5e4e88;
+      margin-top: 8px;
+    }
+  }
+  .responsive-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  ion-button {
+    margin-top: 16px;
+    width: 100%;
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    &.clear {
+      color: $primary-color;
+    }
+  }
+
+  .divider {
+    display: block;
+    text-align: center;
+    margin: 16px 0;
+    font-size: 12px;
+    color: #999;
+    position: relative;
+    &.line {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background-color: #ddd;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
 }
