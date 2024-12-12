@@ -38,7 +38,6 @@
         <ion-item ><ion-button [routerLink]="['/etudiant']">Les étudiant</ion-button></ion-item>
         <ion-item ><ion-button [routerLink]="['/matiere']">Les Matières</ion-button></ion-item>
         <ion-item ><ion-button [routerLink]="['/contact']">Contact</ion-button></ion-item>
-        <ion-item ><ion-button [routerLink]="['/formation']">Fromation</ion-button></ion-item>
         <ion-item ><ion-button [routerLink]="['/login']">Déconnexion</ion-button></ion-item>
       </ion-list>
     </ion-content>
@@ -47,36 +46,21 @@
   <ion-router-outlet id="main-content"></ion-router-outlet>
 
   <ion-content>
-    <div class="dashboard">
-      <div class="main-content">
-        <div class="header">
-          <h1>------</h1>
-          <ion-button>----</ion-button>
-        </div>
-        <div class="stats">
-          <div class="stat">
-            <h3>-------</h3>
-            <p>--------</p>
-          </div>
-          <div class="stat">
-            <h3>-------</h3>
-            <p>---------</p>
-          </div>
-          <div class="stat">
-            <h3>----------</h3>
-            <p>-----------</p>
-          </div>
-          <div class="stat">
-            <h3>----------</h3>
-            <p>-----------</p>
-          </div>
-        </div>
-      </div>
+    <div class="propos-page">
+      <h1>À propos de l'ISIMED</h1>
+      <p>
+        Crée en 2006, en vertu du décret numéro 1587-2006 du 06 Juin 2006, l’Institut supérieur d’informatique de Médenine a pour mission de former des étudiants capables de concevoir et de réaliser des projets en informatique conformément aux besoins des utilisateurs et des entreprises.
+      </p>
+      
+        Il comporte deux départements :
+        <ul>
+          <li>Le département de l’informatique industrielle</li>
+          <li>Le département de l’informatique et multimédia</li>
+        </ul>
+        <img src="\assets\icon\logo2.jpg" alt="ISIMED Image" class="responsive-image" />
+        <img src="\assets\icon\logo1.jpg" alt="ISIMED Image" class="responsive-image" />
+
     </div>
-    <p>Crée en 2006, en vertu du décret numéro 1587-2006 du 06 Juin 2006, l’institut supérieur d’informatique de Médenine a pour mission de former des étudiants capables de concevoir et de réaliser des projets en informatique conformément aux besoins des utilisateurs et des entreprises. Il comporte deux départements :
-    Le département de l’informatique industrielle
-    Le département de l’informatique et multimédia
-    Doté des équipements de pointe pour la professionnalisation ; les laboratoires au sein de l’institut permet aux étudiants d’acquérir des connaissances plus pratiques et de se spécialiser dans des domaines bien précis.</p>
   </ion-content>
 </ion-app>
 

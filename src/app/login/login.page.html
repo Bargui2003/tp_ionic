@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button  text="Back"></ion-back-button>
+      <ion-back-button> </ion-back-button>
     </ion-buttons>
     <ion-title>Connexion</ion-title>
   </ion-toolbar>
@@ -11,8 +11,8 @@
   <ion-row justify-content-center>
   <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
   <div class="ion-text-center">
-  <br><br><br>
-  <h4>Login Form</h4>
+  <br><br>
+  <h4>Connexion</h4>
   </div>
   <br><br><br><br><br><br>
   <div class="form">
@@ -27,8 +27,8 @@
  </ion-item> <br>
   </div>
   <div padding>
-  <ion-button size="large" (click)="loginUser()" expand="block">Login</ion-button>
-  <a [routerLink]="['/forgetpass']" class="small-text">Forgot Password?</a>
+  <ion-button size="large" (click)="loginUser()" expand="block">Connexion</ion-button>
+  <a [routerLink]="['/forgetpass']" class="small-text">mot de passe oublié ?</a>
   
   </div>
   </ion-col>
