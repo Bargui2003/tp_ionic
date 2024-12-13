@@ -11,7 +11,8 @@ export class ForgetpassPage implements OnInit {
   ngOnInit() {
   }
   user = { email: '' };
-  recoverPassword() {
+  submit() {
+    alert("vérifier votre email")
     
   }
 }

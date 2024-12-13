@@ -14,6 +14,11 @@ export class MatierePage {
       coefficient: '1.5',
     },
     {
+      nom: 'Anglais',
+      module: 'option',
+      coefficient: '1',
+    },
+    {
       nom: 'développement mobile',
       module: 'développement',
       coefficient: '1.5',
@@ -32,6 +37,16 @@ export class MatierePage {
       nom: 'Entrepreneuriat',
       module: 'option',
       coefficient: '1',
+    },
+    {
+      nom: 'dév de systéme répatie',
+      module: 'développement',
+      coefficient: '1.5',
+    },
+    {
+      nom: 'technique de compilation',
+      module: 'compilation',
+      coefficient: '1.5',
     },
   ];
 
